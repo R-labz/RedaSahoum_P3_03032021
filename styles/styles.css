@@ -215,5 +215,56 @@ footer i {
   position: relative;
   top: -120px;
   background-color: #f1e9e9;
-  border-radius: 40px 40px 0;
+  border-radius: 40px 40px 0 0;
+}
+.menu .menu__title {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+.menu .menu__title i {
+  font-size: 1.7em;
+}
+
+.menu-section {
+  margin: 0 20px;
+}
+.menu-section h3 {
+  text-transform: uppercase;
+  font-weight: 300;
+}
+
+.menu-card {
+  background-color: white;
+  border-radius: 20px;
+  padding: 15px;
+  margin: 20px 0;
+}
+.menu-card h4 {
+  margin: 0 0 5px 0;
+  font-size: 20px;
+}
+.menu-card p {
+  margin: 0;
+  font-weight: 300;
+}
+.menu-card .menu__plats-price {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+.menu-card .menu__price {
+  font-weight: 700;
 }/*# sourceMappingURL=styles.css.map */

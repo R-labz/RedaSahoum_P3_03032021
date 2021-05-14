@@ -166,9 +166,7 @@ footer {
 
     /* ***********************INDEX 2 ****************************** */
 
-    nav i {
-        
-    }
+
     .header-restaurants__image {
         width: 100%;
         object-fit: contain;
@@ -180,5 +178,44 @@ footer {
         position: relative;
         top: -120px;
         background-color: $fourth;
-        border-radius: 40px 40px 0;
+        border-radius: 40px 40px 0 0;
+        .menu__title {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: space-around;
+            i {
+                font-size: 1.7em;
+            }
+        }
+    }
+
+    .menu-section {
+        margin: 0 20px;
+        h3 {
+            text-transform: uppercase;
+            font-weight: 300;
+        }
+    }
+
+    .menu-card {
+        background-color: white;
+        border-radius: 20px;
+        padding: 15px;
+        margin: 20px 0;
+        h4 {
+            margin: 0 0 5px 0;
+            font-size: 20px;
+        }
+        p {
+            margin: 0;
+            font-weight: 300
+        }
+        .menu__plats-price {
+            display: flex;
+            justify-content: space-between;
+        }
+       .menu__price {
+           font-weight: 700;
+       }
     }
