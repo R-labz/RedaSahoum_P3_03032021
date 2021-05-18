@@ -202,7 +202,7 @@ footer i {
           align-items: center;
 }
 
-/* ***********************INDEX 2 ****************************** */
+/* ***********************INDEX AUTRES ****************************** */
 .header-restaurants__image {
   width: 100%;
   -o-object-fit: contain;
@@ -228,8 +228,10 @@ footer i {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin: 0 20px;
 }
 .menu .menu__title i {
   font-size: 1.7em;
@@ -243,6 +245,25 @@ footer i {
   font-weight: 300;
 }
 
+@media (min-width: 770px) {
+  .menu {
+    max-width: 1500px;
+    margin-right: auto;
+    margin-left: auto;
+  }
+
+  .menu-desktop {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+
+  .menu-card {
+    min-width: 350px;
+  }
+}
 .menu-card {
   background-color: white;
   border-radius: 20px;

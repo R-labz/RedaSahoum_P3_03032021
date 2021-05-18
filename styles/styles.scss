@@ -98,6 +98,7 @@ nav {
     }
 }
 
+
 /* ***********************SECTION RESTAURANTS 1****************************** */
 
 .restaurants {
@@ -164,7 +165,7 @@ footer {
         align-items: center;
     }
 
-    /* ***********************INDEX 2 ****************************** */
+    /* ***********************INDEX AUTRES ****************************** */
 
 
     .header-restaurants__image {
@@ -183,7 +184,8 @@ footer {
             display: flex;
             flex-direction: row;
             align-items: center;
-            justify-content: space-around;
+            justify-content: space-between;
+            margin: 0 20px;
             i {
                 font-size: 1.7em;
             }
@@ -195,6 +197,21 @@ footer {
         h3 {
             text-transform: uppercase;
             font-weight: 300;
+        }
+    }
+
+    @media (min-width: 770px) {
+        .menu {
+            max-width: 1500px;
+            margin-right: auto;
+            margin-left: auto;
+        }
+        .menu-desktop {
+            display: flex;
+          flex-wrap: wrap;   
+        }
+        .menu-card {
+            min-width: 350px;
         }
     }
 
