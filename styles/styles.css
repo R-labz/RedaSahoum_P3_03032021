@@ -61,6 +61,7 @@ nav a {
   border-radius: 50px;
   border: none;
   margin-bottom: 30px;
+  font-weight: 700;
 }
 
 .header-fonctionnement {
@@ -111,6 +112,18 @@ nav a {
   margin-left: auto;
 }
 
+@media (min-width: 770px) {
+  .header-fonctionnement .fonctionnement-cards {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+  }
+  .header-fonctionnement .fonctionnement-card {
+    margin: 0 1%;
+    max-width: 300px;
+  }
+}
 /* ***********************SECTION RESTAURANTS 1****************************** */
 .restaurants {
   background-color: #f1e9e9;
@@ -172,6 +185,16 @@ nav a {
   font-size: 1.8em;
 }
 
+@media (min-width: 770px) {
+  .restaurants .restaurants-cards {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+}
 /* ***********************FOOTER 1****************************** */
 footer {
   background-color: #353535;
@@ -180,10 +203,16 @@ footer {
 footer i {
   font-size: 0.8em;
   padding-right: 10px;
+  position: relative;
+  top: 2px;
+}
+footer .footer-logo {
+  font-family: "Shrikhand", cursive;
+  font-size: 1.2em;
 }
 
 .footer-ul {
-  padding: 20px;
+  padding: 10px 20px 20px;
 }
 .footer-ul p {
   margin-bottom: 10px;
@@ -200,20 +229,37 @@ footer i {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  margin-bottom: -10px;
 }
 
+@media (min-width: 770px) {
+  .footer-ul {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+  }
+  .footer-ul .icons {
+    margin-bottom: 0;
+  }
+}
 /* ***********************INDEX AUTRES ****************************** */
 .header-restaurants__image {
   width: 100%;
-  -o-object-fit: contain;
-     object-fit: contain;
-  position: relative;
-  top: -30px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  height: 315px;
 }
 
 .menu {
-  position: relative;
-  top: -120px;
   background-color: #f1e9e9;
   border-radius: 40px 40px 0 0;
 }
@@ -247,7 +293,7 @@ footer i {
 
 @media (min-width: 770px) {
   .menu {
-    max-width: 1500px;
+    max-width: 1260px;
     margin-right: auto;
     margin-left: auto;
   }
@@ -277,6 +323,7 @@ footer i {
 .menu-card p {
   margin: 0;
   font-weight: 300;
+  font-size: 17px;
 }
 .menu-card .menu__plats-price {
   display: -webkit-box;
@@ -288,4 +335,9 @@ footer i {
 }
 .menu-card .menu__price {
   font-weight: 700;
+}
+
+.button-menus {
+  text-align: center;
+  padding: 30px 0;
 }/*# sourceMappingURL=styles.css.map */
