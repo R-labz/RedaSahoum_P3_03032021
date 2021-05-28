@@ -38,6 +38,10 @@ nav {
     }
 }
 
+a {
+    text-decoration: none;
+}
+
 /* ***********************POUR LE PREMIER INDEX 1****************************** */
 
 .explorer-localisation {
@@ -162,6 +166,10 @@ nav {
             flex-wrap: wrap;
         }
     }
+    .restaurants-card {
+        width: 48%;
+        margin: 1%;
+    }
 }
 /* ***********************FOOTER 1****************************** */
 
@@ -204,7 +212,10 @@ footer {
         }
     }
     /* ***********************INDEX AUTRES ****************************** */
-
+    .index-autres-title {
+        display: flex;
+        justify-content: space-around;
+    }
 
     .header-restaurants__image {
         width: 100%;
@@ -215,13 +226,15 @@ footer {
     .menu {
         background-color: $fourth;
         border-radius: 40px 40px 0 0;
+
         .menu__title {
             display: flex;
             flex-direction: row;
             align-items: center;
             justify-content: space-between;
             margin: 0 20px;
-            
+            position: relative;
+            top: -80px;
             i {
                 font-size: 1.7em;
             }
@@ -230,9 +243,37 @@ footer {
 
     .menu-section {
         margin: 0 20px;
+        animation: fadein 2s;
+        -webkit-animation: fadein 3s;
         h3 {
             text-transform: uppercase;
             font-weight: 300;
+        }
+    }
+
+    #plats {
+        animation-delay: 1s;
+    }
+
+    #desserts {
+        animation-delay: 2s;
+    }
+
+    @keyframes fadein {
+        from {
+            opacity:0;
+        }
+        to {
+            opacity:1;
+        }
+    }
+
+    @-webkit-keyframes fadein { /* sur Safari et Chrome */
+        from {
+            opacity:0;
+        }
+        to {
+            opacity:1;
         }
     }
 
@@ -254,7 +295,7 @@ footer {
     .menu-card {
         background-color: white;
         border-radius: 20px;
-        padding: 15px;
+        
         margin: 20px 0;
         h4 {
             margin: 0 0 5px 0;
@@ -265,13 +306,39 @@ footer {
             font-weight: 300;
             font-size: 17px;
         }
+        .plats-price {
+            display: flex;
+            flex-direction: column;
+            width: 100%;
+            padding: 15px;
+            }
         .menu__plats-price {
             display: flex;
             justify-content: space-between;
         }
+        .menu-plats {
+            text-overflow: ellipsis;
+            white-space: nowrap;
+        }
        .menu__price {
            font-weight: 700;
        }
+       .menu-card__survol {
+        background-color: rgb(98, 218, 158);
+        width: 20%;
+        height: 100%;
+        display: none;
+    }
+    .card-survol {
+        display: flex;
+        align-items: center;
+        
+        }
+        &:hover {
+            .menu-card__survol {
+                display: block;
+            }
+        }
     }
 
 .button-menus {

@@ -27,6 +27,10 @@ nav a {
           align-items: center;
 }
 
+a {
+  text-decoration: none;
+}
+
 /* ***********************POUR LE PREMIER INDEX 1****************************** */
 .explorer-localisation {
   display: -webkit-box;
@@ -194,6 +198,11 @@ nav a {
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
   }
+
+  .restaurants-card {
+    width: 48%;
+    margin: 1%;
+  }
 }
 /* ***********************FOOTER 1****************************** */
 footer {
@@ -252,6 +261,14 @@ footer .footer-logo {
   }
 }
 /* ***********************INDEX AUTRES ****************************** */
+.index-autres-title {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
 .header-restaurants__image {
   width: 100%;
   -o-object-fit: cover;
@@ -278,6 +295,8 @@ footer .footer-logo {
       -ms-flex-pack: justify;
           justify-content: space-between;
   margin: 0 20px;
+  position: relative;
+  top: -80px;
 }
 .menu .menu__title i {
   font-size: 1.7em;
@@ -285,12 +304,41 @@ footer .footer-logo {
 
 .menu-section {
   margin: 0 20px;
+  animation: fadein 2s;
+  -webkit-animation: fadein 3s;
 }
 .menu-section h3 {
   text-transform: uppercase;
   font-weight: 300;
 }
 
+#plats {
+  -webkit-animation-delay: 1s;
+          animation-delay: 1s;
+}
+
+#desserts {
+  -webkit-animation-delay: 2s;
+          animation-delay: 2s;
+}
+
+@keyframes fadein {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@-webkit-keyframes fadein {
+  /* sur Safari et Chrome */
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
 @media (min-width: 770px) {
   .menu {
     max-width: 1260px;
@@ -313,7 +361,6 @@ footer .footer-logo {
 .menu-card {
   background-color: white;
   border-radius: 20px;
-  padding: 15px;
   margin: 20px 0;
 }
 .menu-card h4 {
@@ -325,6 +372,17 @@ footer .footer-logo {
   font-weight: 300;
   font-size: 17px;
 }
+.menu-card .plats-price {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 100%;
+  padding: 15px;
+}
 .menu-card .menu__plats-price {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -333,8 +391,29 @@ footer .footer-logo {
       -ms-flex-pack: justify;
           justify-content: space-between;
 }
+.menu-card .menu-plats {
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
 .menu-card .menu__price {
   font-weight: 700;
+}
+.menu-card .menu-card__survol {
+  background-color: #62da9e;
+  width: 20%;
+  height: 100%;
+  display: none;
+}
+.menu-card .card-survol {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.menu-card:hover .menu-card__survol {
+  display: block;
 }
 
 .button-menus {
