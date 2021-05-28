@@ -1,6 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Shrikhand&display=swap");
 body {
-  font-family: "Roboto", sans-serif;
+  font-family: 'Roboto', sans-serif;
   margin: 0;
 }
 
@@ -9,12 +9,13 @@ ul {
 }
 
 .restaurant-title {
-  font-family: "Shrikhand", cursive;
+  font-family: 'Shrikhand', cursive;
 }
 
 nav {
   margin: 20px 0;
 }
+
 nav a {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -40,6 +41,7 @@ nav a {
           align-items: center;
   background-color: #ddcdcd;
 }
+
 .explorer-localisation i {
   padding-right: 10px;
 }
@@ -49,6 +51,7 @@ nav a {
   background-color: #f1e9e9;
   margin-top: -20px;
 }
+
 .header-reserver h1 {
   padding-top: 30px;
 }
@@ -67,6 +70,7 @@ nav a {
 .header-fonctionnement {
   margin: 20px;
 }
+
 .header-fonctionnement .fonctionnement-cards {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -98,6 +102,7 @@ nav a {
   -webkit-box-shadow: 1px 1px 12px #b3abab;
           box-shadow: 1px 1px 12px #b3abab;
 }
+
 .fonctionnement-card .card__number {
   background: #9356DC;
   position: relative;
@@ -107,6 +112,7 @@ nav a {
   color: white;
   border-radius: 50px;
 }
+
 .fonctionnement-card h4 {
   margin-right: auto;
   margin-left: auto;
@@ -124,15 +130,18 @@ nav a {
     max-width: 300px;
   }
 }
+
 /* ***********************SECTION RESTAURANTS 1****************************** */
 .restaurants {
   background-color: #f1e9e9;
   padding-bottom: 40px;
 }
+
 .restaurants h2 {
   padding-top: 40px;
   margin: 20px;
 }
+
 .restaurants .restaurants-cards {
   margin: 20px;
   display: -webkit-box;
@@ -156,6 +165,7 @@ nav a {
   margin: 10px 0;
   height: 300px;
 }
+
 .restaurants-card img {
   border-radius: 20px 20px 0 0;
   width: 100%;
@@ -163,6 +173,7 @@ nav a {
   -o-object-fit: cover;
      object-fit: cover;
 }
+
 .restaurants-card .restaurants-card__title {
   padding: 0 10px;
   display: -webkit-box;
@@ -175,12 +186,15 @@ nav a {
       -ms-flex-pack: justify;
           justify-content: space-between;
 }
+
 .restaurants-card h4 {
   margin-bottom: 0;
 }
+
 .restaurants-card p {
   margin-top: 5px;
 }
+
 .restaurants-card i {
   font-size: 1.8em;
 }
@@ -195,25 +209,29 @@ nav a {
         flex-wrap: wrap;
   }
 }
+
 /* ***********************FOOTER 1****************************** */
 footer {
   background-color: #353535;
   color: white;
 }
+
 footer i {
   font-size: 0.8em;
   padding-right: 10px;
   position: relative;
-  top: 2px;
+  top: +2px;
 }
+
 footer .footer-logo {
-  font-family: "Shrikhand", cursive;
+  font-family: 'Shrikhand', cursive;
   font-size: 1.2em;
 }
 
 .footer-ul {
   padding: 10px 20px 20px;
 }
+
 .footer-ul p {
   margin-bottom: 10px;
 }
@@ -251,6 +269,7 @@ footer .footer-logo {
     margin-bottom: 0;
   }
 }
+
 /* ***********************INDEX AUTRES ****************************** */
 .header-restaurants__image {
   width: 100%;
@@ -263,6 +282,7 @@ footer .footer-logo {
   background-color: #f1e9e9;
   border-radius: 40px 40px 0 0;
 }
+
 .menu .menu__title {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -279,16 +299,49 @@ footer .footer-logo {
           justify-content: space-between;
   margin: 0 20px;
 }
+
 .menu .menu__title i {
   font-size: 1.7em;
 }
 
 .menu-section {
   margin: 0 20px;
+  animation: fadein 2s;
+  -webkit-animation: fadein 3s;
 }
+
 .menu-section h3 {
   text-transform: uppercase;
   font-weight: 300;
+}
+
+#plats {
+  -webkit-animation-delay: 1s;
+          animation-delay: 1s;
+}
+
+#desserts {
+  -webkit-animation-delay: 2s;
+          animation-delay: 2s;
+}
+
+@keyframes fadein {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@-webkit-keyframes fadein {
+  /* sur Safari et Chrome */
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }
 
 @media (min-width: 770px) {
@@ -297,7 +350,6 @@ footer .footer-logo {
     margin-right: auto;
     margin-left: auto;
   }
-
   .menu-desktop {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -305,26 +357,40 @@ footer .footer-logo {
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
   }
-
   .menu-card {
     min-width: 350px;
   }
 }
+
 .menu-card {
   background-color: white;
   border-radius: 20px;
   padding: 15px;
   margin: 20px 0;
 }
+
 .menu-card h4 {
   margin: 0 0 5px 0;
   font-size: 20px;
 }
+
 .menu-card p {
   margin: 0;
   font-weight: 300;
   font-size: 17px;
 }
+
+.menu-card .plats-price {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 80%;
+}
+
 .menu-card .menu__plats-price {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -333,11 +399,28 @@ footer .footer-logo {
       -ms-flex-pack: justify;
           justify-content: space-between;
 }
+
 .menu-card .menu__price {
   font-weight: 700;
+  text-overflow: ellipsis;
+}
+
+.menu-card .menu-card__survol {
+  background-color: #62da9e;
+  width: 20%;
+}
+
+.menu-card .card-survol {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .button-menus {
   text-align: center;
   padding: 30px 0;
-}/*# sourceMappingURL=styles.css.map */
+}
+/*# sourceMappingURL=styles.css.map */
