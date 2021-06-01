@@ -3,6 +3,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Shrikhand&display=swap');
 
 //variables//
+$link-text-color: #fff;
+$bg-color: #f1e9e9;
+$button-bg-1: #541388;
+$border-radius: 6px;
+$overlay-color: #fff;
 $primary: #9356DC;
 $secondary: #FF79DA;
 $tertiary: #99E2D0;
@@ -39,6 +44,58 @@ nav {
 }
 
 /* ***********************POUR LE PREMIER INDEX 1****************************** */
+/* Loader chargement de la page
+ */
+.loader-wrapper {
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.8);
+    z-index: 100;
+    position: absolute;
+    display: flex;
+    align-items: center;
+    animation: hide 2s linear;
+    animation-fill-mode: forwards;
+    visibility: visible;
+
+    .loader {
+        border: solid 10px #f9f9f9;
+        //background-color: blue;
+        border-top: 10px solid $primary;
+        border-bottom: 10px solid $secondary;
+        border-radius: 50%; 
+        width: 100px;
+        height: 100px;
+        margin: auto;
+        animation: spin 2s linear;
+        animation-fill-mode: forwards;
+        position: absolute;
+        top: 0; left: 0; right: 0; bottom: 0;
+        visibility: visible;
+    }
+}
+
+@keyframes hide {
+    0% {
+        visibility: visible;
+    }
+
+    100% {
+        visibility: hidden;
+    }
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+        visibility: visible;
+    }
+
+    100% {
+        transform: rotate(360deg);
+        visibility: hidden;
+    }
+}
 
 .explorer-localisation {
     @include flex-center;
@@ -313,9 +370,6 @@ footer {
        .card-survol {
            display: flex;
            align-items: center;
-           &:hover {
-               
-           }
        }
     }
 
