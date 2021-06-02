@@ -235,7 +235,7 @@ a {
   margin: 20px;
 }
 
-.restaurants .restaurants-cards {
+.restaurants-cards {
   margin: 20px;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -250,6 +250,15 @@ a {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+}
+
+.new {
+  color: #008766;
+  background: #99E2D0;
+  border: 5px solid #99E2D0;
+  border-radius: 5px;
+  position: relative;
+  left: 10%;
 }
 
 .restaurants-card {
@@ -293,13 +302,17 @@ a {
 }
 
 @media (min-width: 770px) {
-  .restaurants .restaurants-cards {
+  .restaurants-cards {
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
         -ms-flex-direction: row;
             flex-direction: row;
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
+  }
+  .restaurants-card {
+    width: 48%;
+    margin: 1%;
   }
 }
 
@@ -444,6 +457,7 @@ footer .footer-logo {
   padding: 1rem;
   border-radius: 0.75rem;
   margin: 1rem 0;
+  width: 300px;
   cursor: pointer;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -463,6 +477,7 @@ footer .footer-logo {
 
 .submenu .menu-card:after {
   content: "\f058";
+  color: white;
   font-family: "Font Awesome 5 Free";
   display: -webkit-box;
   display: -ms-flexbox;
@@ -481,7 +496,7 @@ footer .footer-logo {
   -webkit-transition: all 0.2s linear 0s;
   transition: all 0.2s linear 0s;
   text-align: center;
-  background: greenyellow;
+  background: #99E2D0;
 }
 
 .submenu .menu-card:hover:after {
@@ -496,6 +511,8 @@ footer .footer-logo {
 
 .submenu .menu-card h4 {
   margin: 0;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }
 
 .submenu .menu-card p {
@@ -529,6 +546,7 @@ footer .footer-logo {
   -webkit-transition: all 0.2s linear 0s;
   transition: all 0.2s linear 0s;
   margin-right: 0;
+  margin-left: 10px;
 }
 
 .submenu .delay-2 {
@@ -543,6 +561,12 @@ footer .footer-logo {
 
 .submenu-title {
   text-transform: uppercase;
+  margin-bottom: 5px;
+}
+
+#trait {
+  border-top: 3px solid #99E2D0;
+  width: 45px;
 }
 
 @-webkit-keyframes fadeInUp {
@@ -593,6 +617,49 @@ footer .footer-logo {
   }
   .button-menus {
     width: 100%;
+  }
+}
+
+.fill {
+  color: black;
+  cursor: pointer;
+}
+
+.fill:hover {
+  -webkit-animation: fill 0.3s ease-in-out;
+          animation: fill 0.3s ease-in-out;
+  display: inline-block;
+  opacity: 1;
+  background: -webkit-gradient(linear, right top, left top, from(#9356dc), color-stop(#b35cdc), color-stop(#cf64dc), color-stop(#e86edb), to(#ff79da));
+  background: linear-gradient(to left, #9356dc, #b35cdc, #cf64dc, #e86edb, #ff79da);
+  background: -webkit-linear-gradient(to left, #9356dc, #b35cdc, #cf64dc, #e86edb, #ff79da);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-weight: bold;
+}
+
+@-webkit-keyframes fill {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 0.5;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes fill {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 0.5;
+  }
+  100% {
+    opacity: 1;
   }
 }
 /*# sourceMappingURL=styles.css.map */

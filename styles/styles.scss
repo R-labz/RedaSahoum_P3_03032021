@@ -184,12 +184,22 @@ a {
         padding-top: 40px;
         margin: 20px;
     }
-    .restaurants-cards {
-        margin: 20px;
-        @include flex-center;
-        flex-direction: column;
-    }
 }
+
+.restaurants-cards {
+    margin: 20px;
+    @include flex-center;
+    flex-direction: column;
+}
+
+.new {
+    color: #008766;
+    background: #99E2D0;
+    border: 5px solid #99E2D0;
+    border-radius: 5px;
+    position: relative;
+    left: 10%;
+  }
 
 .restaurants-card {
     background-color: white;
@@ -220,12 +230,14 @@ a {
 }
 
 @media (min-width: 770px) {
-    .restaurants {
         .restaurants-cards {
             flex-direction: row;
             flex-wrap: wrap;
-        }
     }
+        .restaurants-card {
+            width: 48%;
+            margin: 1%
+        }
 }
 /* ***********************FOOTER 1****************************** */
 
@@ -330,6 +342,7 @@ footer {
                 padding: 1rem;
                 border-radius: 0.75rem;
                 margin: 1rem 0;
+                width: 300px;
                 cursor: pointer;
                 display: flex;
                 transition: all 0.2s linear 0s;
@@ -342,6 +355,7 @@ footer {
     
                 &:after {
                     content: "\f058";
+                    color: white;
                     font-family: "Font Awesome 5 Free";
                     display: flex;
                     align-items: center;
@@ -353,11 +367,10 @@ footer {
                     height: 100%;
                     transition: all 0.2s linear 0s;
                     text-align: center;
-                    background: greenyellow;
+                    background: #99E2D0;
                 }
     
                 &:hover {
-    
                     &:after {
                       right: 0;
                     }
@@ -370,6 +383,8 @@ footer {
     
                 h4 {
                     margin: 0;
+                    text-overflow: ellipsis;
+                    white-space: nowrap;
                 }
     
                 p {
@@ -379,7 +394,6 @@ footer {
                 .card-text {
                     flex: 1;
                     overflow: hidden;
-    
                     p {
                         width: 100%;
                         overflow: hidden;
@@ -394,6 +408,7 @@ footer {
                     justify-content: flex-end;
                     transition: all 0.2s linear 0s;
                     margin-right: 0;
+                    margin-left: 10px;
                 }
             }
     
@@ -408,6 +423,12 @@ footer {
     
         .submenu-title {
             text-transform: uppercase;
+            margin-bottom: 5px;
+        }
+
+        #trait {
+            border-top : 3px solid #99E2D0;
+            width : 45px;
         }
     
         @keyframes fadeInUp {
@@ -448,3 +469,31 @@ footer {
        width: 100%;
     }
 }
+
+.fill {
+    color: black;
+    cursor: pointer;
+    &:hover {
+      animation: fill 0.3s ease-in-out;
+      display: inline-block;
+      opacity: 1;
+      background:linear-gradient(to left, #9356dc, #b35cdc, #cf64dc, #e86edb, #ff79da);
+      background:-webkit-linear-gradient(to left, #9356dc, #b35cdc, #cf64dc, #e86edb, #ff79da);
+      background-clip: text;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color:transparent;
+      font-weight: bold;
+        }
+    }
+
+    @keyframes fill {
+        0% {
+          opacity: 0;
+        }
+        50% {
+          opacity: 0.5;
+        }
+        100% {
+          opacity: 1;
+        }
+      }
