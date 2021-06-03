@@ -148,6 +148,10 @@ a {
     background-color: $fourth;
     border-radius: 20px;
     box-shadow: 1px 1px 12px rgb(179, 171, 171);
+    &:hover {
+        opacity: 0.5;
+    box-shadow: 3px 3px 3px purple;
+    }
     .card__number {
         background: $primary;
         position: relative;
@@ -192,13 +196,19 @@ a {
     flex-direction: column;
 }
 
+.btn__card {
+    margin-top: -30px;
+}
+
 .new {
     color: #008766;
     background: #99E2D0;
     border: 5px solid #99E2D0;
     border-radius: 5px;
+    float: right;
     position: relative;
-    left: 10%;
+    top: 42px;
+    right: 15px;
   }
 
 .restaurants-card {
@@ -261,6 +271,11 @@ footer {
         margin-bottom: 10px;
     }
 }
+
+footer a {
+    color: white;
+}
+
 .icons {
         display: flex;
         flex-direction: row;
@@ -284,6 +299,10 @@ footer {
         display: flex;
         justify-content: space-around;
         width: 70%;
+    }
+
+    nav i {
+        color: black;
     }
 
     .header-restaurants__image {
