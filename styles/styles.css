@@ -396,25 +396,42 @@ nav i {
 }
 .submenu .menu-card:hover:after {
   right: 0;
+  -webkit-animation: rotate-center 0.6s ease-in-out both;
+  animation: rotate-center 0.6s ease-in-out both;
 }
 .submenu .menu-card:hover .card-price {
   margin-right: 50px;
   transition: all 0.2s linear 0s;
 }
-.submenu .menu-card h4 {
-  margin: 0;
-  text-overflow: ellipsis;
-  white-space: nowrap;
+@-webkit-keyframes rotate-center {
+  0% {
+    transform: rotate(0);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
 }
-.submenu .menu-card p {
-  margin: 0;
+@keyframes rotate-center {
+  0% {
+    transform: rotate(0);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
 }
 .submenu .menu-card .card-text {
   flex: 1;
   overflow: hidden;
 }
 .submenu .menu-card .card-text p {
+  margin: 0;
   width: 100%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.submenu .menu-card .card-text h4 {
+  margin: 0;
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
