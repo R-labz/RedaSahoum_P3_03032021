@@ -308,8 +308,12 @@ nav i {
   color: black;
 }
 
-.header-restaurants__image {
+.header-restaurants__img {
+  text-align: center;
+}
+.header-restaurants__img .header-restaurants__image {
   width: 100%;
+  max-width: 1200px;
   -o-object-fit: cover;
      object-fit: cover;
   height: 315px;
@@ -346,7 +350,17 @@ nav i {
        column-gap: 1rem;
 }
 
-@media (max-width: 1200px) {
+@media (max-width: 1200px) and (min-width: 770px) {
+  .menu {
+    width: 100%;
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .menu__title {
+    width: 100%;
+  }
+}
+@media (max-width: 770px) {
   .menu {
     width: 100%;
     grid-template-columns: 1fr;
@@ -378,7 +392,7 @@ nav i {
           animation-fill-mode: forwards;
   opacity: 0;
 }
-.submenu .menu-card:after {
+.submenu .menu-card .menu-card-hidden {
   content: "";
   color: white;
   font-family: "Font Awesome 5 Free";
@@ -392,10 +406,13 @@ nav i {
   height: 100%;
   transition: all 0.2s linear 0s;
   text-align: center;
-  background: #99E2D0;
+  background: #32695c;
 }
-.submenu .menu-card:hover:after {
+.submenu .menu-card:hover .menu-card-hidden {
   right: 0;
+}
+.submenu .menu-card:hover .menu-card-hidden .fas.fa-check-circle {
+  font-size: 1.5em;
   -webkit-animation: rotate-center 0.6s ease-in-out both;
   animation: rotate-center 0.6s ease-in-out both;
 }
