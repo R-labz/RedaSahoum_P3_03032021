@@ -393,7 +393,7 @@ nav i {
           animation-fill-mode: forwards;
   opacity: 0;
 }
-.submenu .menu-card .menu-card-hidden {
+.submenu .menu-card .menu-card_hidden {
   content: "";
   color: white;
   font-family: "Font Awesome 5 Free";
@@ -409,10 +409,10 @@ nav i {
   text-align: center;
   background: #32695c;
 }
-.submenu .menu-card:hover .menu-card-hidden {
+.submenu .menu-card:hover .menu-card_hidden {
   right: 0;
 }
-.submenu .menu-card:hover .menu-card-hidden .fas.fa-check-circle {
+.submenu .menu-card:hover .menu-card_hidden .fas.fa-check-circle {
   font-size: 1.5em;
   -webkit-animation: rotate-center 0.6s ease-in-out both;
   animation: rotate-center 0.6s ease-in-out both;

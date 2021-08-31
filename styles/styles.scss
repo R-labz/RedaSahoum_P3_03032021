@@ -386,7 +386,7 @@ footer a {
                 animation-fill-mode: forwards;
                 opacity: 0;
     
-                .menu-card-hidden {
+                .menu-card_hidden {
                     content: "\f058";
                     color: white;
                     font-family: "Font Awesome 5 Free";
@@ -405,7 +405,7 @@ footer a {
 
     
                 &:hover {
-                    .menu-card-hidden {
+                    .menu-card_hidden {
                       right: 0;
                         .fas.fa-check-circle {
                             font-size: 1.5em;
