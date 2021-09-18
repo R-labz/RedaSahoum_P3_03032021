@@ -106,7 +106,7 @@ a {
 
 .explorer-localisation {
     @include flex-center;
-    background-color: rgb(221, 205, 205);
+    background-color: rgba(234,234,234,255);
     i {
         padding-right: 10px;
     }
@@ -114,7 +114,7 @@ a {
 
 .header-reserver {
     text-align: center;
-    background-color: $fourth;
+    background-color: rgba(246,246,246,255);
     margin-top: -20px;
     h1 {
         padding-top: 30px;
@@ -133,6 +133,7 @@ a {
 
 .header-fonctionnement {
     margin: 20px;
+    
     .fonctionnement-cards {
         @include flex-center;
         flex-direction: column;
@@ -145,12 +146,19 @@ a {
     align-items: center;
     padding: 5px 5px 10px 5px;
     margin: 10px 0;
-    background-color: $fourth;
+    background-color: rgba(246,246,246,255);
     border-radius: 20px;
-    box-shadow: 1px 1px 12px rgb(179, 171, 171);
+    box-shadow: 1px 1px 12px rgb(212, 212, 212);
+    .fas.fa-mobile-alt, .fas.fa-list-ul, .fas.fa-store {
+        font-size: 1.2em;
+    }
+
     &:hover {
-        opacity: 0.5;
+        background-color: rgba(245,237,255,255);
     box-shadow: 3px 3px 3px purple;
+    .fas.fa-mobile-alt, .fas.fa-list-ul, .fas.fa-store {
+        color:$primary;
+    }
     }
     .card__number {
         background: $primary;
@@ -182,7 +190,7 @@ a {
 /* ***********************SECTION RESTAURANTS 1****************************** */
 
 .restaurants {
-    background-color: $fourth;
+    background-color: rgba(246,246,246,255);
     padding-bottom: 40px;
     h2 {
         padding-top: 40px;
@@ -324,7 +332,7 @@ footer a {
         margin: 0 auto;
         width: 100%;
         max-width: 1200px;
-        background-color: $bg-color;
+        background-color: rgba(246,246,246,255);
         border-radius: 20px 20px 0 0;
         position: relative;
         top:-80px;
@@ -340,7 +348,7 @@ footer a {
     .menu {
         width: 1200px;
         margin: -80px auto;
-        background-color: $bg-color;
+        background-color: rgba(246,246,246,255);
         display: grid;
         grid-template-columns: repeat(3, 1fr);
         column-gap: 1rem;
@@ -375,7 +383,7 @@ footer a {
                 padding: 1rem;
                 border-radius: 0.75rem;
                 margin: 1rem 0;
-                width: 300px;
+                width: 90%;
                 cursor: pointer;
                 display: flex;
                 transition: all 0.2s linear 0s;
@@ -400,7 +408,7 @@ footer a {
                     height: 100%;
                     transition: all 0.2s linear 0s;
                     text-align: center;
-                    background: #32695c;
+                    background: rgba(153,226,208,255);
                 }
 
     
@@ -511,7 +519,7 @@ footer a {
     margin-top: 80px;
     margin-right: auto;
     margin-left: auto;
-    background-color: $bg-color;
+    background-color: rgba(246,246,246,255);
     text-align: center;
 }
 
